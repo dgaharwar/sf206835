@@ -1,0 +1,14 @@
+resource "option-type" "costcenter" {
+  code = "costcenter"
+  name = "azure cost center"
+  uuid = "c93a69d2-2047-48b4-aad7-127b081b2fb2"
+  defaultValue = "123"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Cost Center"
+  fieldName = "costcenter"
+  labels = [ "sf206835" ]
+  optionList = { name = "azure cost center" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
