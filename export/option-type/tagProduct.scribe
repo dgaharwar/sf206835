@@ -1,0 +1,11 @@
+resource "option-type" "tagProduct" {
+  code = "tagProduct"
+  name = "azure tag product"
+  uuid = "9cdcecdc-1f83-4a09-b3ab-18854d4fd595"
+  defaultValue = "morph"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Tag Product"
+  fieldName = "tagProduct"
+  labels = [ "sf206835" ]
+  required = true
+}
