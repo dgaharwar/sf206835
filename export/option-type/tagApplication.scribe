@@ -1,0 +1,11 @@
+resource "option-type" "tagApplication" {
+  code = "tagApplication"
+  name = "azure tag application"
+  uuid = "bde07574-c7b9-48cb-be0d-77a55892c3c0"
+  defaultValue = "app1"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Tag Application"
+  fieldName = "tagApplication"
+  labels = [ "sf206835" ]
+  required = true
+}
