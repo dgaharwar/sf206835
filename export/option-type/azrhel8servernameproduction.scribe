@@ -1,0 +1,12 @@
+resource "option-type" "azrhel8servernameproduction" {
+  code = "azrhel8servernameproduction"
+  name = "Hostname"
+  uuid = "c7fdbaba-e440-4853-9a6d-c74f83d352f0"
+  dependsOnCode = "environment:(production)"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Hostname"
+  fieldName = "azrhel8servernameproduction"
+  labels = [ "sf206835" ]
+  requireOnCode = "environment:(production)"
+  visibleOnCode = "environment:(production)"
+}
