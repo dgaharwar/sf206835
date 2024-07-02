@@ -1,0 +1,14 @@
+resource "option-type" "environment" {
+  code = "environment"
+  name = "azure environment"
+  uuid = "cc519b0d-a9a5-4940-8c70-22f0cc4ee873"
+  exportMeta = true
+  fieldContext = "config.customOptions"
+  fieldLabel = "Environment"
+  fieldName = "environment"
+  labels = [ "sf206835" ]
+  optionList = { name = "azure environment" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
