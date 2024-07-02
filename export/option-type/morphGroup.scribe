@@ -1,0 +1,14 @@
+resource "option-type" "morphGroup" {
+  code = "morphGroup"
+  name = "API Groups"
+  uuid = "221fb05e-770c-4d81-8ad2-0625a1c6d817"
+  config = { _multiSelect = "" }
+  defaultValue = "119"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Group"
+  fieldName = "morphGroup"
+  labels = [ "sf206835" ]
+  optionList = { name = "API Groups" }
+  optionSource = "list"
+  type = "select"
+}
