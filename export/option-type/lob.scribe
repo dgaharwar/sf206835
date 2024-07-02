@@ -1,0 +1,14 @@
+resource "option-type" "lob" {
+  code = "lob"
+  name = "azure line of business"
+  uuid = "2fe45c01-0fe9-46ed-a583-10da6b268961"
+  defaultValue = "test1"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Line of Business"
+  fieldName = "lob"
+  labels = [ "sf206835" ]
+  optionList = { name = "azure line of business" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}
