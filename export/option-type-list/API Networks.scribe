@@ -1,0 +1,25 @@
+resource "option-type-list" "API Networks" {
+  name = "API Networks"
+  uuid = "d52f71c8-4c6b-43e9-8966-977d4ef06208"
+  apiType = "networks"
+  labels = [ "sf206835" ]
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.morphGroup && input.morphCloud && input.morphResourcePool){
+  results.siteId = input.morphGroup
+  results.zoneId = input.morphCloud
+  results.groupId = input.morphGroup
+  results.cloudId = input.morphCloud
+  results.zonePoolId = input.morphResourcePool
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+if (input.morphGroup && input.morphCloud && input.morphResourcePool) {
+  for(var x=0;x < data.length; x++) {
+   results.push({name: data[x].name,value:data[x].id});
+  }
+}
+EOFSCRIBE
+  type = "api"
+  visibility = "public"
+}
