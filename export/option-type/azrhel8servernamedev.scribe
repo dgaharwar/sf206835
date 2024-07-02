@@ -1,0 +1,12 @@
+resource "option-type" "azrhel8servernamedev" {
+  code = "azrhel8servernamedev"
+  name = "Hostname"
+  uuid = "005dc172-9f08-42d4-aec3-c6053b9af966"
+  dependsOnCode = "environment:(dev)"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Hostname"
+  fieldName = "azrhel8servernamedev"
+  labels = [ "sf206835" ]
+  requireOnCode = "environment:(dev)"
+  visibleOnCode = "environment:(dev)"
+}
