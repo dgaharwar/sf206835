@@ -1,0 +1,15 @@
+resource "option-type" "morphPlan" {
+  code = "morphPlan"
+  name = "API Plans"
+  uuid = "8981e3b0-e7aa-490a-9e18-55fef26e7cbe"
+  defaultValue = "13156"
+  dependsOnCode = "morphCloud"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Plan"
+  fieldName = "morphPlan"
+  labels = [ "sf206835" ]
+  noBlank = true
+  optionList = { name = "API Plans" }
+  optionSource = "list"
+  type = "select"
+}
