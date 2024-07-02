@@ -1,0 +1,11 @@
+resource "option-type" "azowner" {
+  code = "azowner"
+  name = "azure owner"
+  uuid = "ec739058-90df-4b63-852e-483970894489"
+  defaultValue = "dgaharwar"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Owner"
+  fieldName = "azowner"
+  labels = [ "sf206835" ]
+  required = true
+}
