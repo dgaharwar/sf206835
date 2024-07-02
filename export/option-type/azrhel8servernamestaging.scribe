@@ -1,0 +1,12 @@
+resource "option-type" "azrhel8servernamestaging" {
+  code = "azrhel8servernamestaging"
+  name = "Hostname"
+  uuid = "6e9730ef-374e-468b-8629-9a52c8a0957d"
+  dependsOnCode = "environment:(staging)"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Hostname"
+  fieldName = "azrhel8servernamestaging"
+  labels = [ "sf206835" ]
+  requireOnCode = "environment:(staging)"
+  visibleOnCode = "environment:(staging)"
+}
