@@ -1,0 +1,10 @@
+resource "instance-type" "AzureWindows2016" {
+  code = "AzureWindows2016"
+  name = "AzureWindows2016"
+  uuid = "5fed62da-c4d8-4af1-b811-6836c72367e6"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "AZUREWINDOWS2016"
+  labels = [ "sf206835" ]
+  visibility = "public"
+}

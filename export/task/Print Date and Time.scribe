@@ -1,0 +1,14 @@
+resource "task" "Print Date and Time" {
+  name = "Print Date and Time"
+  uuid = "d3b597aa-4867-4748-8150-cc852ffe3168"
+  dateCreated = "2024-04-02T16:26:08.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2024-04-02T16:26:08.000Z"
+  options = [
+    {
+      content = { uuid = "398c9e61-1604-48cc-bd6e-967e2279b487" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "winrmTask" }
+}

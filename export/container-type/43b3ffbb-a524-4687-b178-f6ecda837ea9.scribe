@@ -1,0 +1,16 @@
+resource "container-type" "43b3ffbb-a524-4687-b178-f6ecda837ea9" {
+  code = "43b3ffbb-a524-4687-b178-f6ecda837ea9"
+  name = "AzureWindows2016"
+  uuid = "9c6ca5b4-8e41-42da-a209-bd7340742d5b"
+  containerVersion = "latest"
+  entryPoint = ""
+  labels = [ "sf206835" ]
+  logTypeCode = "vm"
+  provisionType = { code = "azure" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "AzureWindows2016"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { uuid = "b23755a9-98ff-46c7-8447-69bb3b9ca13b" }
+}

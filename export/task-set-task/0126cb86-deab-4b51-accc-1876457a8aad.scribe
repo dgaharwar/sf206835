@@ -1,0 +1,4 @@
+resource "task-set-task" "0126cb86-deab-4b51-accc-1876457a8aad" {
+  uuid = "0126cb86-deab-4b51-accc-1876457a8aad"
+  task = { name = "Print Date and Time" }
+}

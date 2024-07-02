@@ -1,0 +1,13 @@
+resource "file-content" "398c9e61-1604-48cc-bd6e-967e2279b487" {
+  uuid = "398c9e61-1604-48cc-bd6e-967e2279b487"
+  content = <<EOFSCRIBE
+# Get the current date and time
+$currentDateTime = Get-Date
+
+# Print the current date and time
+Write-Host "Current Date and Time: $currentDateTime"
+
+EOFSCRIBE
+  dateCreated = "2024-04-02T16:26:08.000Z"
+  lastUpdated = "2024-04-02T16:26:08.000Z"
+}

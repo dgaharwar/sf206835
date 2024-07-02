@@ -1,0 +1,12 @@
+resource "instance-type-layout" "2a72a8eb-fb19-4c40-afc8-a8124ddefb93" {
+  code = "2a72a8eb-fb19-4c40-afc8-a8124ddefb93"
+  name = "AzureWindows2016"
+  uuid = "bef4ff83-e353-4cf3-826c-00a22568d0a9"
+  instanceType = { code = "AzureWindows2016" }
+  instanceVersion = "2016"
+  labels = [ "sf206835" ]
+  memoryRequirement = 0
+  provisionType = { code = "azure" }
+  taskSets = [ { name = "Windows Workflow" } ]
+  workloads = [ { code = "43b3ffbb-a524-4687-b178-f6ecda837ea9" } ]
+}

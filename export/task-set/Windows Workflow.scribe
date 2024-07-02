@@ -1,0 +1,8 @@
+resource "task-set" "Windows Workflow" {
+  name = "Windows Workflow"
+  uuid = "909a29c5-2bb0-4b61-ae73-a967cc051ec5"
+  dateCreated = "2024-04-02T16:34:27.000Z"
+  lastUpdated = "2024-05-24T14:14:38.000Z"
+  platform = "windows"
+  taskSetTasks = [ { uuid = "0126cb86-deab-4b51-accc-1876457a8aad" } ]
+}
