@@ -1,0 +1,217 @@
+resource "option-type-form" "dg206835" {
+  code = "dg206835"
+  name = "dg206835"
+  uuid = "3f647812-7b74-4c3e-92f1-9c2fe857df03"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  field-groups = [
+    {
+      code = "ee310339-8bf1-4db9-abdb-b8a26a844d46"
+      name = "new fieldgroup"
+      collapsible = false
+      defaultCollapsed = false
+    }
+  ]
+  labels = [ "sf206835" ]
+  options = [
+    {
+      code = "environment"
+      name = "azure environment"
+      uuid = "cc519b0d-a9a5-4940-8c70-22f0cc4ee873"
+      exportMeta = true
+      fieldContext = "config.customOptions"
+      fieldLabel = "Environment"
+      fieldName = "environment"
+      labels = [ "sf206835" ]
+      optionList = { name = "azure environment" }
+      optionSource = "list"
+      required = true
+      type = "select"
+    },
+    {
+      code = "azrhel8servernamedev"
+      name = "Hostname"
+      uuid = "005dc172-9f08-42d4-aec3-c6053b9af966"
+      dependsOnCode = "environment:(dev)"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Hostname"
+      fieldName = "azrhel8servernamedev"
+      labels = [ "sf206835" ]
+      requireOnCode = "environment:(dev)"
+      visibleOnCode = "environment:(dev)"
+    },
+    {
+      code = "azrhel8servernameqa"
+      name = "Hostname"
+      uuid = "8b57cd5c-ac10-4f45-bf0a-31064ca3082e"
+      dependsOnCode = "environment:(qa)"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Hostname"
+      fieldName = "azrhel8servernameqa"
+      labels = [ "sf206835" ]
+      requireOnCode = "environment:(qa)"
+      visibleOnCode = "environment:(qa)"
+    },
+    {
+      code = "azrhel8servernamestaging"
+      name = "Hostname"
+      uuid = "6e9730ef-374e-468b-8629-9a52c8a0957d"
+      dependsOnCode = "environment:(staging)"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Hostname"
+      fieldName = "azrhel8servernamestaging"
+      labels = [ "sf206835" ]
+      requireOnCode = "environment:(staging)"
+      visibleOnCode = "environment:(staging)"
+    },
+    {
+      code = "azrhel8servernameproduction"
+      name = "Hostname"
+      uuid = "c7fdbaba-e440-4853-9a6d-c74f83d352f0"
+      dependsOnCode = "environment:(production)"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Hostname"
+      fieldName = "azrhel8servernameproduction"
+      labels = [ "sf206835" ]
+      requireOnCode = "environment:(production)"
+      visibleOnCode = "environment:(production)"
+    },
+    {
+      code = "morphGroup"
+      name = "API Groups"
+      uuid = "221fb05e-770c-4d81-8ad2-0625a1c6d817"
+      config = { _multiSelect = "" }
+      defaultValue = "119"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Group"
+      fieldName = "morphGroup"
+      labels = [ "sf206835" ]
+      optionList = { name = "API Groups" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "morphCloud"
+      name = "API Clouds New"
+      uuid = "9b2fea1e-ae75-4551-b687-83c185622e3e"
+      defaultValue = "31"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cloud"
+      fieldName = "morphCloud"
+      labels = [ "sf206835" ]
+      optionList = { name = "API Clouds" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "morphResourcePool"
+      name = "API Resource Pools"
+      uuid = "2f35030b-487c-4069-9523-67f5126a5280"
+      dependsOnCode = "morphCloud"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Resource Pool"
+      fieldName = "morphResourcePool"
+      labels = [ "sf206835" ]
+      optionList = { name = "API Resource Pool" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "morphPlan"
+      name = "API Plans"
+      uuid = "8981e3b0-e7aa-490a-9e18-55fef26e7cbe"
+      defaultValue = "13156"
+      dependsOnCode = "morphCloud"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Plan"
+      fieldName = "morphPlan"
+      labels = [ "sf206835" ]
+      noBlank = true
+      optionList = { name = "API Plans" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "morphNetwork"
+      name = "API Networks"
+      uuid = "1bb1f98d-b925-43bd-9a47-5cd26340f646"
+      defaultValue = "network-2602"
+      dependsOnCode = "morphResourcePool"
+      fieldContext = "config.customOptions"
+      fieldGetName = "network"
+      fieldLabel = "Network"
+      fieldName = "morphNetwork"
+      fieldSetName = "network"
+      labels = [ "sf206835" ]
+      optionList = { name = "API Azure Subnets" }
+      optionSource = "list"
+      type = "select"
+    },
+    {
+      code = "costcenter"
+      name = "azure cost center"
+      uuid = "c93a69d2-2047-48b4-aad7-127b081b2fb2"
+      defaultValue = "123"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Cost Center"
+      fieldName = "costcenter"
+      labels = [ "sf206835" ]
+      optionList = { name = "azure cost center" }
+      optionSource = "list"
+      required = true
+      type = "select"
+    },
+    {
+      code = "lob"
+      name = "azure line of business"
+      uuid = "2fe45c01-0fe9-46ed-a583-10da6b268961"
+      defaultValue = "test1"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Line of Business"
+      fieldName = "lob"
+      labels = [ "sf206835" ]
+      optionList = { name = "azure line of business" }
+      optionSource = "list"
+      required = true
+      type = "select"
+    },
+    {
+      code = "azowner"
+      name = "azure owner"
+      uuid = "ec739058-90df-4b63-852e-483970894489"
+      defaultValue = "dgaharwar"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Owner"
+      fieldName = "azowner"
+      labels = [ "sf206835" ]
+      required = true
+    },
+    {
+      code = "tagApplication"
+      name = "azure tag application"
+      uuid = "bde07574-c7b9-48cb-be0d-77a55892c3c0"
+      defaultValue = "app1"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Tag Application"
+      fieldName = "tagApplication"
+      labels = [ "sf206835" ]
+      required = true
+    },
+    {
+      code = "tagProduct"
+      name = "azure tag product"
+      uuid = "9cdcecdc-1f83-4a09-b3ab-18854d4fd595"
+      defaultValue = "morph"
+      fieldContext = "config.customOptions"
+      fieldLabel = "Tag Product"
+      fieldName = "tagProduct"
+      labels = [ "sf206835" ]
+      required = true
+    }
+  ]
+}

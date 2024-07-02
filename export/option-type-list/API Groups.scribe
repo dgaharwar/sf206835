@@ -1,0 +1,9 @@
+resource "option-type-list" "API Groups" {
+  name = "API Groups"
+  uuid = "3b4f117c-8a8f-467f-854f-4d8b4930821f"
+  apiType = "groups"
+  labels = [ "sf206835" ]
+  realTime = true
+  type = "api"
+  visibility = "public"
+}

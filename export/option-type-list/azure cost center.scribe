@@ -1,0 +1,12 @@
+resource "option-type-list" "azure cost center" {
+  name = "azure cost center"
+  uuid = "3d28eeb8-3e6c-4ab2-9442-74f8678f5a78"
+  initialDataset = <<EOFSCRIBE
+'123',123
+'456',456
+'789',789
+EOFSCRIBE
+  labels = [ "sf206835" ]
+  type = "manual"
+  visibility = "public"
+}

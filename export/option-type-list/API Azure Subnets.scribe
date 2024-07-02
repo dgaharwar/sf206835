@@ -1,0 +1,23 @@
+resource "option-type-list" "API Azure Subnets" {
+  name = "API Azure Subnets"
+  uuid = "4f5c7de7-6f7d-4f7d-b32c-b65b214b51c4"
+  apiType = "instanceNetworks"
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.morphGroup && input.morphCloud && input.morphResourcePool){
+  results.siteId = input.morphGroup
+  results.zoneId = input.morphCloud
+  results.zonePoolId = input.morphResourcePool
+  //results.provisionType = 'azure'
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+if (input.morphGroup && input.morphCloud && input.morphResourcePool) {
+  for(var x=0;x < data.length; x++) {
+   results.push({name: data[x].name,value:data[x].id});
+  }
+}
+EOFSCRIBE
+  type = "api"
+  visibility = "public"
+}

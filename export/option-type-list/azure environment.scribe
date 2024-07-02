@@ -1,0 +1,9 @@
+resource "option-type-list" "azure environment" {
+  name = "azure environment"
+  uuid = "6fb38fd5-cc84-4d36-8012-87c446b3e201"
+  apiType = "environments"
+  labels = [ "sf206835" ]
+  realTime = true
+  type = "api"
+  visibility = "public"
+}

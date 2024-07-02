@@ -1,0 +1,19 @@
+resource "option-type-list" "API Plans" {
+  name = "API Plans"
+  uuid = "8d5d66bc-ecd7-4fef-b7be-4014f17026ea"
+  apiType = "servicePlans"
+  labels = [ "sf206835" ]
+  realTime = true
+  requestScript = <<EOFSCRIBE
+results.zoneId = input.morphCloud
+results.siteId = input.morphGroup
+//results.provisionTypeId = input.vsProvisionType
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+for(var x=0;x < data.length; x++){
+results.push({name:data[x].name,value:data[x].id});
+}
+EOFSCRIBE
+  type = "api"
+  visibility = "public"
+}

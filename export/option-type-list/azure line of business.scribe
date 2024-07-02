@@ -1,0 +1,12 @@
+resource "option-type-list" "azure line of business" {
+  name = "azure line of business"
+  uuid = "8df91c27-9f7d-4fac-af4b-b003d52005bd"
+  initialDataset = <<EOFSCRIBE
+'test1','test1'
+'test2','test2'
+'test3','test3'
+EOFSCRIBE
+  labels = [ "sf206835" ]
+  type = "manual"
+  visibility = "public"
+}

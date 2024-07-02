@@ -1,0 +1,14 @@
+resource "catalog-item-type" "null" {
+  name = "dg206835"
+  uuid = "553f7653-55aa-4e56-a3e3-70d44fc980c2"
+  allowQuantity = true
+  dateCreated = "2024-07-02T13:19:01.000Z"
+  featured = true
+  form = { code = "dg206835" }
+  formConfig = "{\"optOut\":{\"f197c80f-23a4-490b-89fb-e45686bc26e2\":false}}"
+  formType = "form"
+  labels = [ { name = "sf206835" } ]
+  lastUpdated = "2024-07-02T17:44:56.000Z"
+  refType = "InstanceType"
+  visibility = "public"
+}

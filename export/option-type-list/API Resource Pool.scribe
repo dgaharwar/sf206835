@@ -1,0 +1,24 @@
+resource "option-type-list" "API Resource Pool" {
+  name = "API Resource Pool"
+  uuid = "7b89d2d1-9387-4b2f-a661-4a8a3103d3e4"
+  apiType = "resourcePools"
+  labels = [ "sf206835" ]
+  realTime = true
+  requestScript = <<EOFSCRIBE
+if (input.morphGroup && input.morphCloud) {
+  results.siteId = input.morphGroup
+  results.zoneId = input.morphCloud
+  results.groupId = input.morphGroup
+  results.cloudId = input.morphCloud
+}
+EOFSCRIBE
+  translationScript = <<EOFSCRIBE
+if (input.morphGroup && input.morphCloud) {
+  for(var x=0;x < data.length; x++) {
+   results.push({name: data[x].name,value:data[x].id});
+  }
+}
+EOFSCRIBE
+  type = "api"
+  visibility = "public"
+}
