@@ -1,0 +1,12 @@
+resource "option-type" "azrhel8servernameqa" {
+  code = "azrhel8servernameqa"
+  name = "Hostname"
+  uuid = "8b57cd5c-ac10-4f45-bf0a-31064ca3082e"
+  dependsOnCode = "environment:(qa)"
+  fieldContext = "config.customOptions"
+  fieldLabel = "Hostname"
+  fieldName = "azrhel8servernameqa"
+  labels = [ "sf206835" ]
+  requireOnCode = "environment:(qa)"
+  visibleOnCode = "environment:(qa)"
+}
