@@ -6,5 +6,6 @@ resource "instance-type" "AzureWindows2016" {
   deploymentService = ""
   environmentPrefix = "AZUREWINDOWS2016"
   labels = [ "sf206835" ]
+  layouts = [ { code = "2a72a8eb-fb19-4c40-afc8-a8124ddefb93" } ]
   visibility = "public"
 }
