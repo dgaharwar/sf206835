@@ -1,0 +1,16 @@
+resource "option-type" "morphNetwork" {
+  code = "morphNetwork"
+  name = "API Networks"
+  uuid = "1bb1f98d-b925-43bd-9a47-5cd26340f646"
+  defaultValue = "network-2602"
+  dependsOnCode = "morphResourcePool"
+  fieldContext = "config.customOptions"
+  fieldGetName = "network"
+  fieldLabel = "Network"
+  fieldName = "morphNetwork"
+  fieldSetName = "network"
+  labels = [ "sf206835" ]
+  optionList = { name = "API Azure Subnets" }
+  optionSource = "list"
+  type = "select"
+}
